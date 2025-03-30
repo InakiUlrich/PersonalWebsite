@@ -2,6 +2,7 @@ import Image from "next/image";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import Laptop from "../../components/Laptop";
+import FadeInComponent from "../../components/FadeInComponent";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
             <Laptop />
           </div>
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                <Image
+            <FadeInComponent component={<Image
                 className="dark:invert"
                 src="/personal_pic.png"
                 alt="Image"
@@ -29,7 +30,7 @@ export default function Home() {
                 width={480}
                 height={280}
                 priority
-              />
+              />} />
               </div>
         </div>
       </main>

@@ -8,6 +8,7 @@ import ProfessionalExperienceList from "../../../components/ProfessionalExperien
 import RelevantProjectsList from "../../../components/RelevantProjectsList";
 import EducationList from "../../../components/EducationList";
 import AdditionalWorkExperienceList from "../../../components/AdditionalWorkExperienceList";
+import FadeInComponent from "../../../components/FadeInComponent";
 
 export default function About() {
   return (
@@ -26,12 +27,12 @@ export default function About() {
                 style={{ alignSelf: 'center' }}
               />
           <div>
-              <SummaryList />
-              <SkillsList />
-              <ProfessionalExperienceList />
-              <RelevantProjectsList />
-              <EducationList />
-              <AdditionalWorkExperienceList />
+            <FadeInComponent component={<SummaryList />} />
+            <FadeInComponent component={<SkillsList />} />
+            <FadeInComponent component={<ProfessionalExperienceList />} />
+            <FadeInComponent component={<RelevantProjectsList />} />
+            <FadeInComponent component={<EducationList />} />
+            <FadeInComponent component={<AdditionalWorkExperienceList />} />
           </div>
         </div>
       </main>

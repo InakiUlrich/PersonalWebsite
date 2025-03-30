@@ -43,7 +43,7 @@ export default function NestedList(props: NestedListProps) {
                             ))}
                           </ul>
                             || props.component !== undefined && props.component
-                            ||props.componentList !== undefined && props.componentList} />
+                            || props.componentList !== undefined && props.componentList} />
             </ListItemButton>
             </List>
         </Collapse>
