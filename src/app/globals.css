@@ -68,3 +68,45 @@ img {
   opacity: 1;
   transform: translateY(0);
 }
+
+.form-input {
+  box-shadow: 10px 5px 5px black;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+}
+
+.form-text-area {
+  box-shadow: 10px 5px 5px black;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+  height: 20vh;
+}
+
+.form {
+  background-color:aqua;
+  height: 50vh;
+  width: auto;
+}
+
+.form-button {
+  border-radius: 25px;
+  box-shadow: 10px 5px 5px black;
+  border: 2px solid black;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-left: 70px;
+  width: 150px;
+}
+
+.form-label {
+  float: left;
+  clear: left;
+}
+
+.result-div {
+  margin-left: 50px;
+  margin-top: 20px;
+}

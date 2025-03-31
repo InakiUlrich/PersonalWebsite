@@ -13,20 +13,19 @@ export async function POST (
     const { name, email, message } = req.body;
 
     const transporter = nodemailer.createTransport({
-      name: 'http://localhost:3000/contact',
-      host: 'smtp.office365.com',
-      port: 587,
+      host: process.env.MAILTRAP_HOST,
+      port: process.env.MAILTRAP_PORT,
       secure: false, // true for 465, false for other ports
       auth: {
-        user: 'inaki.ulrich@outlook.com',
-        pass: 'Lilblue89!',
+        user: process.env.MAILTRAP_USER,
+        pass: process.env.MAILTRAP_PASSWORD,
       },
     });
 
     try {
       const res = await transporter.sendMail({
-        from: 'inaki.ulrich@outlook.com',
-        to: 'inaki.ulrich@gmail.com',
+        from: process.env.GMAIL_USER,
+        to: process.env.GMAIL_USER,
         subject: `Contact Form Submission from ${name}`,
         text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`,
       });
