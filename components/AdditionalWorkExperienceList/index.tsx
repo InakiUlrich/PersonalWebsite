@@ -2,12 +2,19 @@ import React from 'react'
 import NestedList from '../NestedList';
 
 const additionalWorkExperienceTitle = "Additional Work Experience";
+const laMadelieneId = "laMadelieneComponent";
 const laMadelieneTitle = "La Madeliene French Bakery & Café, Gilbert, AZ: Server Assistant			2019 – 2020";
+const sectorSevenId = "sectorSevenComponent";
 const sectorSevenTitle = "SectorSeven, Alexandria, MN: Technical Operations Lead 2017 – 2019";
+const hookupCellularId = "hookupCellularComponent";
 const hookupCellularTitle = "Hookup Cellular, Phoenix, AZ: 2010 – 2017";
+const hookupCellularGMId = "hookupCellularGMComponent";
 const hookupCellularGMTitle = "General Manager 2015 – 2017";
+const hookupCellularLeadId = "hookupCellularLeadComponent";
 const hookupCellularLeadTitle = "Lead Repair Technician – Retail 2013 – 2015";
+const hookupCellularQualityId = "hookupCellularQualityComponent";
 const hookupCellularQualityTitle = "Quality Control Manager 2011 – 2013";
+const hookupCellularLCDId = "hookupCellularLCDComponent";
 const hookupCellularLCDTitle = "LCD Tester 2010 – 2011";
 
 const laMadelieneBulletOne = "Prepped service, restocked inventory, washed dishes, and bussed tables.";
@@ -30,15 +37,15 @@ const hookupCellularLeadBulletList = [hookupCellularLeadBulletOne, hookupCellula
 const hookupCellularQualityBulletList = [hookupCellularQualityBulletOne, hookupCellularQualityBulletTwo];
 const hookupCellularLCDBulletList = [hookupCellularLCDBulletOne];
 
-const laMadelieneComponent = <NestedList title={laMadelieneTitle} textList={laMadelieneBulletList} />;
-const sectorSevenComponent = <NestedList title={sectorSevenTitle} textList={sectorSevenBulletList} />;
-const hookupCellularGMComponent = <NestedList title={hookupCellularGMTitle} textList={hookupCellularGMBulletList} />;
-const hookupCellularLeadComponent = <NestedList title={hookupCellularLeadTitle} textList={hookupCellularLeadBulletList} />;
-const hookupCellularQualityComponent = <NestedList title={hookupCellularQualityTitle} textList={hookupCellularQualityBulletList} />;
-const hookupCellularLCDComponent = <NestedList title={hookupCellularLCDTitle} textList={hookupCellularLCDBulletList} />;
+const laMadelieneComponent = <NestedList key={laMadelieneId} title={laMadelieneTitle} textList={laMadelieneBulletList} />;
+const sectorSevenComponent = <NestedList key={sectorSevenId} title={sectorSevenTitle} textList={sectorSevenBulletList} />;
+const hookupCellularGMComponent = <NestedList key={hookupCellularGMId} title={hookupCellularGMTitle} textList={hookupCellularGMBulletList} />;
+const hookupCellularLeadComponent = <NestedList key={hookupCellularLeadId} title={hookupCellularLeadTitle} textList={hookupCellularLeadBulletList} />;
+const hookupCellularQualityComponent = <NestedList key={hookupCellularQualityId} title={hookupCellularQualityTitle} textList={hookupCellularQualityBulletList} />;
+const hookupCellularLCDComponent = <NestedList key={hookupCellularLCDId} title={hookupCellularLCDTitle} textList={hookupCellularLCDBulletList} />;
 
 const hookupCellularComponents = [hookupCellularGMComponent, hookupCellularLeadComponent, hookupCellularQualityComponent, hookupCellularLCDComponent]
-const hookupCellularComponent = <NestedList title={hookupCellularTitle} componentList={hookupCellularComponents}/>
+const hookupCellularComponent = <NestedList key={hookupCellularId} title={hookupCellularTitle} componentList={hookupCellularComponents}/>
 const nestedComponents = [laMadelieneComponent, sectorSevenComponent, hookupCellularComponent];
 
 const AdditionalWorkExperienceList = () => {

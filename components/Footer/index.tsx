@@ -20,7 +20,7 @@ const Footer = () => {
         </a>
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://github.com/iulrich1?tab=overview&from=2025-03-01&to=2025-03-17"
+          href="https://github.com/inakiulrich"
           target="_blank"
           rel="noopener noreferrer"
         >

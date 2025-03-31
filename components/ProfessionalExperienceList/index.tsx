@@ -2,7 +2,9 @@ import React from 'react'
 import NestedList from '../NestedList'
 
 const professionalExperienceTitle = "Professional Experience";
+const amazonId = "amazonComponent";
 const amazonTitle = "Amazon (Remote, RTO Feb 2023 Seattle, WA): Software Dev Engineer 2022 – 2024";
+const hypeDocsId = "hypceDocsComponent";
 const hypeDocsTitle = "HypeDocs (Remote): Software Developer Intern  2021 – 2022";
 
 const amazonBulletOne = "Led projects to migrate our team's services onto Amazon's latest internal authentication protocol and to programmatically delete customer data.";
@@ -21,8 +23,8 @@ const amazonBulletList = [amazonBulletOne, amazonBulletTwo, amazonBulletThree, a
 ];
 const hypeDocsBulletList = [hypeDocsBulletOne];
 
-const amazonComponent = <NestedList title={amazonTitle} textList={amazonBulletList} />;
-const hypeDocsComponent = <NestedList title={hypeDocsTitle} textList={hypeDocsBulletList} />;
+const amazonComponent = <NestedList key={amazonId} title={amazonTitle} textList={amazonBulletList} />;
+const hypeDocsComponent = <NestedList key={hypeDocsId}  title={hypeDocsTitle} textList={hypeDocsBulletList} />;
 
 const nestedComponents = [amazonComponent, hypeDocsComponent];
 

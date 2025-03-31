@@ -34,14 +34,10 @@ export async function POST (
       } else {
         return NextResponse.json({ message: 'Email unsuccessful' });
       }
-      //return NextResponse.json({ message: 'Email sent successfully' });
-      //res.status(200).json({ message: 'Email sent successfully' });
     } catch (error: any) {
         return NextResponse.json({ message: error.message || 'Failed to send email' });
-      //res.status(500).json({ message: error.message || 'Failed to send email' });
     }
   } else {
     return NextResponse.json({ message: 'Method Not Allowed' });
-    //res.status(405).json({ message: 'Method Not Allowed' });
   }
 }
