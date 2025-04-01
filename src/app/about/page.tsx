@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
-import NestedList from "../../../components/NestedList";
 import SummaryList from "../../../components/SummaryList";
 import SkillsList from "../../../components/SkillsList";
 import ProfessionalExperienceList from "../../../components/ProfessionalExperienceList";
