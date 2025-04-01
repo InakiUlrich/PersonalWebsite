@@ -1,20 +1,11 @@
 'use client'
 import * as React from 'react';
-import ListSubheader from '@mui/material/ListSubheader';
-import MenuList from '@mui/material/MenuList';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-import ArrowDropDown from '@mui/icons-material/ArrowDropDown';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import ExpandLess from '@mui/icons-material/ExpandLess';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-import DraftsIcon from '@mui/icons-material/Drafts';
-import SendIcon from '@mui/icons-material/Send';
-import StarBorder from '@mui/icons-material/StarBorder';
-import { Code } from '@mui/icons-material';
 
 export default function NestedList(props: NestedListProps) {
   const [open, setOpen] = React.useState(true);

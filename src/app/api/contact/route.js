@@ -1,13 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-type Data = {
-  message: string;
-};
-
 export async function POST (
-  req: NextApiRequest
+  req
 ) {
   if (req.method === 'POST') {
     const { name, email, message } = req.body;
@@ -34,7 +29,7 @@ export async function POST (
       } else {
         return NextResponse.json({ message: 'Email unsuccessful' });
       }
-    } catch (error: any) {
+    } catch (error) {
         return NextResponse.json({ message: error.message || 'Failed to send email' });
     }
   } else {

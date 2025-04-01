@@ -1,3 +1,4 @@
+/* eslint-disable */
 interface NestedListProps {
     title: string;
     text?: string;
