@@ -16,8 +16,8 @@ export async function POST(
 
             const transporter = nodemailer.createTransport({
                 host: process.env.IONOS_HOST,
-                port: Number(process.env.PORT) || 587,
-                secure: false,
+                port: Number(process.env.PORT) || 465,
+                secure: true,
                 auth: {
                     user: process.env.IONOS_USER,
                     pass: process.env.IONOS_PASSWORD,
