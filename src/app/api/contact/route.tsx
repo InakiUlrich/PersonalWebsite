@@ -36,14 +36,20 @@ export async function POST(
                 },
             });*/
 
-            const config: aws.SESClientConfig = {
+            const SES_CONFIG = { 
+                accessKeyId: process.env.AWS_ACCESS_KEY, 
+                secretAccesskey: process.env.AWS_SECRET_ACCESS_KEY, 
+                region: process.env.AWS_SES_REGION 
+            };
+
+            /*const config: aws.SESClientConfig = {
                 credentials: { 
                     accessKeyId: process.env.AWS_ACCESS_KEY_ID!, 
                     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!
                 },
                 region: process.env.AWS_REGION,
-            };
-            const ses = new aws.SES(config);
+            };*/
+            const ses = new aws.SES(SES_CONFIG);
             const transporter = nodemailer.createTransport({ SES: { ses, aws } });
 
             /*const transporter = nodemailer.createTransport({
