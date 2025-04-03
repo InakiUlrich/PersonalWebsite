@@ -36,7 +36,14 @@ export async function POST(
                 },
             });*/
 
-            const ses = new aws.SES(); // no config needed
+            const config: aws.SESClientConfig = {
+                credentials: { 
+                    accessKeyId: process.env.AWS_ACCESS_KEY_ID!, 
+                    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!
+                },
+                region: process.env.AWS_REGION,
+            };
+            const ses = new aws.SES(config);
             const transporter = nodemailer.createTransport({ SES: { ses, aws } });
 
             /*const transporter = nodemailer.createTransport({
