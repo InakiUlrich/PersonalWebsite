@@ -1,6 +1,8 @@
+/* eslint-disable */
 import nodemailer from 'nodemailer';
 import express from 'express';
 import cors from 'cors';
+import * as aws from '@aws-sdk/client-ses';
 
 const app = express();
 app.use(express.json());
@@ -14,14 +16,24 @@ export async function POST(
             const body = await req.json();
             const { name, email, message } = body;
 
-            const transporter = nodemailer.createTransport({
+            /*const transporter = nodemailer.createTransport({
                 host: process.env.IONOS_HOST,
-                port: parseInt(process.env.SMTP_PORT || '587'),
-                secure: process.env.SMTP_SECURE === 'true',
+                port: 465,
+                secure: true,
                 auth: {
                     user: process.env.IONOS_USER,
                     pass: process.env.IONOS_PASSWORD,
                 },
+            });*/
+
+            const transporter = nodemailer.createTransport({
+                SES: {
+                    aws: {
+                        accessKeyId: process.env.AWS_SMTP_ACCESS_KEY,
+                        secretAccessKey: process.env.AWS_SMTP_SECRET_ACCESS_KEY,
+                        region: process.env.AWS_SMTP_REGION
+                    }
+                }
             });
 
             const mailOptions = {
