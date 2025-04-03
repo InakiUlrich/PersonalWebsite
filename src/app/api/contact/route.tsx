@@ -1,7 +1,8 @@
+/* eslint-disable */
 import nodemailer from 'nodemailer';
 import express from 'express';
 import cors from 'cors';
-import * as aws from '@aws-sdk/client-ses';
+import { SESClient, SendEmailCommand, SendEmailCommandInput } from "@aws-sdk/client-ses";
 
 const app = express();
 app.use(express.json());
@@ -42,7 +43,7 @@ export async function POST(
                 region: process.env.AWS_SES_REGION 
             };*/
 
-            const config: aws.SESClientConfig = {
+            /*const config: aws.SESClientConfig = {
                 credentials: { 
                     accessKeyId: process.env.AWS_ACCESS_KEY_ID!, 
                     secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!
@@ -50,7 +51,44 @@ export async function POST(
                 region: process.env.AWS_REGION,
             };
             const ses = new aws.SES(config);
-            const transporter = nodemailer.createTransport({ SES: { ses, aws } });
+            const transporter = nodemailer.createTransport({ SES: { ses, aws } });*/
+
+            const sesClient = new SESClient({
+                region: process.env.AWS_REGION,
+                credentials: {
+                    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+                    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+                },
+            });
+
+            const params: SendEmailCommandInput = {
+                Destination: {
+                    ToAddresses: [process.env.IONOS_USER!],
+                },
+                Message: {
+                    Body: {
+                        Html: {
+                            Data: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`,
+                        },
+                    },
+                    Subject: {
+                        Data: `Message from ${name}`,
+                    },
+                },
+                Source: process.env.IONOS_USER!,
+            };
+
+            async function sendEmail() {
+                try {
+                    const command = new SendEmailCommand(params);
+                    const response = await sesClient.send(command);
+                    console.log("Email sent successfully:", response);
+                } catch (error) {
+                    console.error("Error sending email:", error);
+                }
+            }
+
+            await sendEmail();
 
             /*const transporter = nodemailer.createTransport({
                 SES: {
@@ -73,7 +111,7 @@ export async function POST(
                 }
             });*/
 
-            const mailOptions = {
+            /*const mailOptions = {
                 from: process.env.IONOS_USER,
                 to: process.env.IONOS_USER,
                 subject: `Message from ${name}`,
@@ -81,7 +119,7 @@ export async function POST(
                 html: `<p>Name: ${name}</p><p>Email: ${email}</p><p>Message: ${message}</p>`
             };
 
-            await transporter.sendMail(mailOptions);
+            await transporter.sendMail(mailOptions);*/
 
             return new Response(JSON.stringify('Email sent successfully'), { status: 200 });
         } catch (error) {
