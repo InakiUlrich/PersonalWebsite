@@ -1,4 +1,3 @@
-/* eslint-disable */
 import nodemailer from 'nodemailer';
 import express from 'express';
 import cors from 'cors';
@@ -16,6 +15,17 @@ export async function POST(
             const body = await req.json();
             const { name, email, message } = body;
 
+            // Create a SES client
+            /*const ses = new SES({
+                region: process.env.AWS_SMTP_REGION,
+                credentials: {
+                    accessKeyId: process.env.AWS_SMTP_ACCESS_KEY,
+                    secretAccessKey: process.env.AWS_SMTP_SECRET_ACCESS_KEY,
+                },
+                apiVersion: '2010-12-01',
+                defaultProvider,
+            });*/
+
             /*const transporter = nodemailer.createTransport({
                 host: process.env.IONOS_HOST,
                 port: 465,
@@ -26,7 +36,21 @@ export async function POST(
                 },
             });*/
 
-            const transporter = nodemailer.createTransport({
+            const ses = new aws.SES(); // no config needed
+            const transporter = nodemailer.createTransport({ SES: { ses, aws } });
+
+            /*const transporter = nodemailer.createTransport({
+                SES: {
+                    ses: ses,
+                    aws: {
+                        region: process.env.AWS_SMTP_REGION,
+                        accessKeyId: process.env.AWS_SMTP_ACCESS_KEY,
+                        secretAccessKey: process.env.AWS_SMTP_SECRET_ACCESS_KEY,
+                    },
+                },
+            });*/
+
+            /*const transporter = nodemailer.createTransport({
                 SES: {
                     aws: {
                         accessKeyId: process.env.AWS_SMTP_ACCESS_KEY,
@@ -34,7 +58,7 @@ export async function POST(
                         region: process.env.AWS_SMTP_REGION
                     }
                 }
-            });
+            });*/
 
             const mailOptions = {
                 from: process.env.IONOS_USER,
