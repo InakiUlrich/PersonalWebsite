@@ -63,7 +63,7 @@ export async function POST(
 
             const params: SendEmailCommandInput = {
                 Destination: {
-                    ToAddresses: [process.env.IONOS_USER!],
+                    ToAddresses: [process.env.GMAIL_USER!],
                 },
                 Message: {
                     Body: {
@@ -75,7 +75,7 @@ export async function POST(
                         Data: `Message from ${name}`,
                     },
                 },
-                Source: process.env.IONOS_USER!,
+                Source: process.env.GMAIL_USER!,
             };
 
             async function sendEmail() {
