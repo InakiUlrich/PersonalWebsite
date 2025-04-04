@@ -10,10 +10,10 @@ const databasesTitle = "Databases";
 const databasesText = "DynamoDB, MongoDB, Firebase, MySQL, SQLite";
 const librariesAndFrameworksId = "librariesAndFrameworksComponent";
 const librariesAndFrameworksTitle = "Libraries/Frameworks";
-const librariesAndFrameworksText = "Spring Boot, Spring MVC, React, Next, Express, Ruby on Rails, Cypress, Selenium";
+const librariesAndFrameworksText = "Spring Boot, Spring MVC, React, Next, Three.js, Express, Ruby on Rails, Cypress, Selenium";
 const cloudComputingId = "cloudComputingComponent";
 const cloudComputingTitle = "Cloud Computing";
-const cloudComputingText = "AWS S3, SNS, SQS, EC2, API Gateway, CDK, LPT, CloudFront, CloudWatch";
+const cloudComputingText = "AWS S3, SNS, SES, SQS, EC2, API Gateway, CDK, LPT, CloudFront, CloudWatch, Route 53, Amplify, IAM";
 
 const languagesComponent = <NestedList key={languagesId} title={languagesTitle} text={languagesText} />;
 const databasesComponent = <NestedList key={databasesId} title={databasesTitle} text={databasesText} />;
