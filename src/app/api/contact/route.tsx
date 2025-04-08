@@ -75,7 +75,7 @@ export async function POST(
                         Data: `Message from ${name}`,
                     },
                 },
-                Source: process.env.GMAIL_USER!,
+                Source: process.env.IONOS_USER!,
             };
 
             async function sendEmail() {

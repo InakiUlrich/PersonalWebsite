@@ -9,7 +9,7 @@ const hypeDocsTitle = "HypeDocs (Remote): Software Developer Intern  2021 – 20
 
 const amazonBulletOne = "Led projects to migrate our team's services onto Amazon's latest internal authentication protocol and to programmatically delete customer data.";
 const amazonBulletTwo = "Updated and added logic across stacks consisting of Spring Boot, Spring MVC, React, and Ruby on Rails.";
-const amazonBulletThree = "Modernized CI/CD by leveraging AWS with tools such as CDK, LPT, CodeCommit, CodeBuild, CodePipeline, and CodeDeploy to detect more bugs earlier in production pipelines.";
+const amazonBulletThree = "Integrated CI/CD by leveraging AWS with tools such as CDK, LPT, CodeCommit, CodeBuild, CodePipeline, and CodeDeploy to detect bugs earlier in production pipelines.";
 const amazonBulletFour = "Implemented backend interactions with AWS DynamoDB, Aurora (MySQL), S3, SNS, SQS, CloudWatch and API Gateway.";
 const amazonBulletFive = "Composed Selenium and Cypress UI and integration tests enabling the onboarding of new clients and advanced features.";
 const amazonBulletSix = "Optimized already existing Cypress UI tests, reducing flakiness by more than 90%.";
