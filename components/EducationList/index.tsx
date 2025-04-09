@@ -5,7 +5,7 @@ const educationTitle = "Education";
 const asuId = "asuComponent";
 const asuTitle = "Arizona State University, Tempe, AZ 2022";
 const cgccId = "cgccComponent";
-const cgccTitle = "Chandler-Gilber Community College, Chandler, AZ 2013";
+const cgccTitle = "Chandler-Gilbert Community College, Chandler, AZ 2013";
 
 const asuText = "B.S., Software Engineering 3.72 GPA, magna cumme laude";
 const cgccText = "A.A., General Studies";

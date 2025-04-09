@@ -9,14 +9,16 @@ const personalWebsiteTitle = "Personal Website 2025";
 const bestSportingId = "bestSportingComponent";
 const bestSportingTitle = "Best Sporting 2021";
 
-const ongoingBulletOne = "Building out the first of two interweaving projects utilizing React, Next, ASP.NET, TypeScript, C#, and MySQL.";
-const personalWebsiteBulletOne = "Built this personal website utilizing React, Next, TypeScript, and Threejs.";
+const ongoingBulletOne = "Designing and beginning skeleton development for an aggregation website utilizing React, Next, ASP.NET, TypeScript, C#, and MySQL.";
+const ongoingBulletTwo = "Designing and developing a React, Next, TypeScript, Express, DynamoDB e-commerce site.";
+const personalWebsiteBulletOne = "Built this personal website utilizing React, Next, TypeScript, JavaScript and Three.js.";
+const personalWebsiteBulletTwo = "Deployed this website via AWS with Route 53, Amplify, SES, CloudWatch, and IAM integrations."
 const bestSportingBulletOne = "Launched a mock website for browsing and purchasing sporting goods.";
 const bestSportingBulletTwo = "Utilized Node with React and HTML/CSS for the frontend and an Express backend tied into a MongoDB database.";
 const bestSportingBulletThree = "Hosted with Heroku and Cloudflare and secured with Auth0, PayPal, and Cloudflare.";
 
-const ongoingBulletList = [ongoingBulletOne];
-const personalWebsiteBulletList = [personalWebsiteBulletOne];
+const ongoingBulletList = [ongoingBulletOne, ongoingBulletTwo];
+const personalWebsiteBulletList = [personalWebsiteBulletOne, personalWebsiteBulletTwo];
 const bestSportingBulletList = [bestSportingBulletOne, bestSportingBulletTwo, bestSportingBulletThree];
 
 const ongoingComponent = <NestedList key={ongoingId} title={ongoingTitle} textList={ongoingBulletList} />;
