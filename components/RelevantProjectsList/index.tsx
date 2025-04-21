@@ -9,8 +9,8 @@ const personalWebsiteTitle = "Personal Website 2025";
 const bestSportingId = "bestSportingComponent";
 const bestSportingTitle = "Best Sporting 2021";
 
-const ongoingBulletOne = "Designing and beginning skeleton development for an aggregation website utilizing React, Next, ASP.NET, TypeScript, C#, and MySQL.";
-const ongoingBulletTwo = "Designing and developing a React, Next, TypeScript, Express, DynamoDB e-commerce site.";
+const ongoingBulletOne = "Designing, researching, and developing an aggregation website utilizing React, Vite, ASP.NET, TypeScript, C#, Python, and MySQL.";
+const ongoingBulletTwo = "Designing and developing a React, Next, TypeScript, Three.js, JavaScript, Express, DynamoDB e-commerce site.";
 const personalWebsiteBulletOne = "Built this personal website utilizing React, Next, TypeScript, JavaScript and Three.js.";
 const personalWebsiteBulletTwo = "Deployed this website via AWS with Route 53, Amplify, SES, CloudWatch, and IAM integrations."
 const bestSportingBulletOne = "Launched a mock website for browsing and purchasing sporting goods.";
