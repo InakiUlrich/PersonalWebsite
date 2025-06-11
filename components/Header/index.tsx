@@ -4,7 +4,8 @@ import { NavigationType } from "./types";
 const navigation: NavigationType[] = [
     { name: "Home", href: "/", id: 1 },
     { name: "About", href: "/about", id: 2 },
-    { name: "Contact", href: "/contact", id: 3 }
+    { name: "Public Projects", href: "/public-projects", id: 3 },
+    { name: "Contact", href: "/contact", id: 4 }
   ];
 
 const Header = () => {

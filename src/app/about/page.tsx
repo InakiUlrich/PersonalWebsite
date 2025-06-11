@@ -115,6 +115,8 @@ const ongoingId = "ongoingComponent";
 const ongoingTitle = "Current ongoing projects 2025";
 const personalWebsiteId = "personalWebsiteComponent";
 const personalWebsiteTitle = "Personal Website 2025";
+const smartShopId = "smartShopComponent";
+const smartShopTitle = "Smartshop 2025";
 const bestSportingId = "bestSportingComponent";
 const bestSportingTitle = "Best Sporting 2021";
 
@@ -122,19 +124,22 @@ const ongoingBulletOne = "Designing, researching, and developing an aggregation 
 const ongoingBulletTwo = "Designing and developing a React, Next, Three.js, Express, DynamoDB e-commerce site.";
 const personalWebsiteBulletOne = "Built this personal website utilizing React, Next, and Three.js.";
 const personalWebsiteBulletTwo = "Deployed this website via AWS with Route 53, Amplify, SES, CloudWatch, and IAM integrations."
+const smartShopBulletOne = "Developed a mock e-commerce store utilizing Wix and GenAI.";
 const bestSportingBulletOne = "Launched a mock website for browsing and purchasing sporting goods.";
 const bestSportingBulletTwo = "Utilized Node with React and HTML/CSS for the frontend and an Express backend tied into a MongoDB database.";
 const bestSportingBulletThree = "Hosted with Heroku and Cloudflare and secured with Auth0, PayPal, and Cloudflare.";
 
 const ongoingBulletList = [ongoingBulletOne, ongoingBulletTwo];
 const personalWebsiteBulletList = [personalWebsiteBulletOne, personalWebsiteBulletTwo];
+const smartShopBulletList = [smartShopBulletOne];
 const bestSportingBulletList = [bestSportingBulletOne, bestSportingBulletTwo, bestSportingBulletThree];
 
 const ongoingComponent = <NestedList key={ongoingId} title={ongoingTitle} textList={ongoingBulletList} />;
 const personalWebsiteComponent = <NestedList key={personalWebsiteId} title={personalWebsiteTitle} textList={personalWebsiteBulletList} />;
+const smartShopComponent = <NestedList key={smartShopId} title={smartShopTitle} textList={smartShopBulletList} />;
 const bestSportingComponent = <NestedList key={bestSportingId} title={bestSportingTitle} textList={bestSportingBulletList} />;
 
-const nestedRelevantProjectsComponents = [ongoingComponent, personalWebsiteComponent, bestSportingComponent];
+const nestedRelevantProjectsComponents = [ongoingComponent, personalWebsiteComponent, smartShopComponent, bestSportingComponent];
 
 const educationTitle = "Education";
 const asuId = "asuComponent";
